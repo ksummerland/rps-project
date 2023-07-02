@@ -35,10 +35,27 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
+    let playerScore = 0;
+    let computerScore = 0;
     for (let games = 0; games < 5; games++) {
         const playerSelection = prompt('Enter your choice!', '').toLowerCase();
+        const computerSelection = getComputerChoice();
         playRound(playerSelection, computerSelection);
+        function score() {
+            if (playRound(playerSelection, computerSelection) === 'You Win!') {
+                playerScore++;
+                return `Player: ${playerScore} Computer: ${computerScore}`;
+            } else if (playRound(playerSelection, computerSelection) === 'You Lose!') {
+                computerScore++;
+                return `Player: ${playerScore} Computer: ${computerScore}`;
+            } else if (playRound(playerSelection, computerSelection) === 'It\'s a tie!') {
+                games--;
+                return `Player: ${playerScore} Computer: ${computerScore}`;
+            }
+        }
+        console.log(score());
         console.log(playerSelection);
+        console.log(computerSelection);
         console.log(playRound(playerSelection, computerSelection));
     }
 }
