@@ -12,21 +12,21 @@ const playerSelection = prompt('Enter your choice!', '').toLowerCase();
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === 'rock' && computerSelection === 'Paper') {
-        return 'You Lose! Paper beats Rock';
+        return 'You Lose!';
     } else if (playerSelection === 'rock' && computerSelection === 'Rock') {
         return 'It\'s a tie!';
     } else if (playerSelection === 'rock' && computerSelection === 'Scissors') {
-        return 'You Win! Rock beats Scissors';
+        return 'You Win!';
     } else if (playerSelection === 'paper' && computerSelection === 'Paper') {
         return 'It\'s a tie!';
     } else if (playerSelection === 'paper' && computerSelection === 'Rock') {
-        return 'You Win! Paper beats Rock';
+        return 'You Win!';
     } else if (playerSelection === 'paper' && computerSelection === 'Scissors') {
-        return 'You Lose! Scissors beats Paper';
+        return 'You Lose!';
     } else if (playerSelection === 'scissors' && computerSelection === 'Paper') {
-        return 'You Win! Scissors beats Paper';
+        return 'You Win!';
     } else if (playerSelection === 'scissors' && computerSelection === 'Rock') {
-        return 'You Lose! Rock beats Scissors';
+        return 'You Lose!';
     } else if (playerSelection === 'scissors' && computerSelection === 'Scissors') {
         return 'It\'s a tie!';
     } else {
