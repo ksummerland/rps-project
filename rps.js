@@ -52,10 +52,18 @@ function game() {
                 games--;
                 return `Player: ${playerScore} Computer: ${computerScore}`;
             }
-        }
-        console.log(score());
+        } 
         console.log(playerSelection);
         console.log(computerSelection);
+        console.log(games);
+        console.log(score());
+
+        if (games === 4 && playerScore < computerScore) {
+            return 'Whoops. You lost the game.';
+        } else if (games === 4 && playerScore > computerScore) {
+            return 'Congratulations! You won the game!';
+        }
+
         console.log(playRound(playerSelection, computerSelection));
     }
 }
